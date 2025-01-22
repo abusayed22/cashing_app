@@ -4916,7 +4916,7 @@ textarea.form-control-lg {
   --bs-card-cap-padding-x: 1rem;
   --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
   --bs-card-cap-color: ;
-  --bs-card-height: ;
+  --bs-card-height: 100%;
   --bs-card-color: ;
   --bs-card-bg: var(--bs-body-bg);
   --bs-card-img-overlay-padding: 1rem;
@@ -13400,7 +13400,7 @@ textarea.form-control-lg {
   margin-top: 30px;
   margin-bottom: 50px;
 }
-@media (min-width: 576px) {
+@media (min-width: 376px) {
   .content-body {
     margin-left: 0px;
     margin-bottom: 50px;
@@ -18887,4 +18887,433 @@ figure > img:hover {
 }
 .funds-credit h5, .funds-credit .h5 {
   margin-bottom: 0px;
+}
+
+
+
+
+/* ------------------------ customization --------------------------- */
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button Styles */
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .form-container {
+    padding: 15px;
+    width: 100%;
+  }
+}
+
+
+
+/* TransactionCard.css */
+
+/* Container for the cards */
+.transaction-card-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Title of the transaction history */
+.transaction-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styling each transaction card */
+.transaction-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Header of the transaction */
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Status 'Received' */
+.transaction-status {
+  font-size: 14px;
+  color: green;
+  font-weight: bold;
+}
+
+/* Amount styling */
+.transaction-amount {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Transaction details */
+.transaction-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Date styling */
+.transaction-date {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Sender styling */
+.transaction-sender {
+  font-size: 14px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Note label */
+.transaction-note {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .transaction-card {
+    padding: 12px;
+  }
+  
+  .transaction-amount {
+    font-size: 16px;
+  }
+
+  .transaction-status {
+    font-size: 12px;
+  }
+
+  .transaction-date, .transaction-sender, .transaction-note {
+    font-size: 12px;
+  }
+}
+
+
+/* SendMoneyForm.css */
+
+/* Overall container for the form */
+.send-money-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form styling */
+.send-money-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button Styling */
+.submit-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .send-money-form-container {
+    padding: 15px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+  }
+}
+
+
+/* ReceivedMoneyForm.css */
+
+/* Overall container for the form */
+.received-money-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form styling */
+.received-money-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button Styling */
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .received-money-form-container {
+    padding: 15px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+  }
+}
+
+/* ClientList.css */
+
+/* Container for the entire client list */
+.client-list-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.client-list-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Wrapper for all client cards */
+.client-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Individual client card styling */
+.client-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Client card header styling */
+.client-card-header {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.client-card-header h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* Client card body styling */
+.client-card-body {
+  font-size: 14px;
+  color: #555;
+}
+
+.client-card-body p {
+  margin: 8px 0;
+}
+
+.client-card-body strong {
+  color: #333;
+}
+
+/* Footer with button */
+.client-card-footer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.view-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .client-list-container {
+    padding: 15px;
+  }
+
+  .client-list-title {
+    font-size: 24px;
+  }
+
+  .client-cards {
+    grid-template-columns: 1fr;
+  }
 }

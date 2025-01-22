@@ -2,7 +2,7 @@ import React from 'react'
 
 function Dashboard() {
     return (
-        <div className="">
+        <div className="container">
             <div className="row">
                 <div className="col-12">
                     <div className="page-title">
@@ -27,10 +27,10 @@ function Dashboard() {
             <div className="row">
                 {/* Stat Widgets */}
                 {[
-                    { title: "Total Balance", value: "$432,568", change: "2.47%", lastMonth: "$24,478", trend: "up" },
-                    { title: "Total Period Change", value: "$245,860", change: "2.47%", lastMonth: "$24,478", trend: "up" },
-                    { title: "Total Period Expenses", value: "$25.35", change: "2.47%", lastMonth: "$24,478", trend: "down" },
-                    { title: "Total Period Income", value: "$22.56", change: "2.47%", lastMonth: "$24,478", trend: "up" }
+                    { title: "Total Send", value: "$432,568", change: "2.47%", lastMonth: "$24,478", trend: "up" },
+                    { title: "Total Due", value: "$245,860", change: "2.47%", lastMonth: "$24,478", trend: "up" },
+                    { title: "Bikash", value: "$25.35", change: "2.47%", lastMonth: "$24,478", trend: "down" },
+                    { title: "Nagad", value: "$22.56", change: "2.47%", lastMonth: "$24,478", trend: "up" }
                 ].map((widget, index) => (
                     <div key={index} className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                         <div className="stat-widget-1">
@@ -47,8 +47,8 @@ function Dashboard() {
                     </div>
                 ))}
             </div>
-            <div className="row">
-                <div className="col-xxl-8 col-xl-8 col-lg-6">
+            {/* <div className="row">
+                <div className="col-xxl-8 col-xl-8 col-lg-6 col-md-12">
                     <div className="card">
                         <div className="card-header balance-trend">
                             <h4 className="card-title">
@@ -98,7 +98,7 @@ function Dashboard() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* Add the rest of your components following the same pattern */}
         </div>
     )
